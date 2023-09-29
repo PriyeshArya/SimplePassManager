@@ -1,0 +1,126 @@
+# Project: SimplePassManager
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = bin/obj/SimplePassManager_private.res
+OBJ      = bin/obj/main.o bin/obj/add.o bin/obj/update.o bin/obj/remove.o bin/obj/lookup.o bin/obj/listall.o bin/obj/userAuth.o bin/obj/readDatabase.o bin/obj/writeDatabase.o bin/obj/getInput.o bin/obj/getConfirmation.o bin/obj/stringConversion.o bin/obj/changeClipboard.o bin/obj/encryption.o bin/obj/color.o bin/obj/router.o bin/obj/about.o bin/obj/checkPass.o bin/obj/setPass.o bin/obj/changePass.o bin/obj/help.o bin/obj/helpAdd.o bin/obj/helpApplication.o bin/obj/helpClear.o bin/obj/helpCommands.o bin/obj/helpDatabase.o bin/obj/helpExit.o bin/obj/helpFind.o bin/obj/helpListall.o bin/obj/helpRemove.o bin/obj/helpSetkey.o bin/obj/helpUpdate.o $(RES)
+LINKOBJ  = bin/obj/main.o bin/obj/add.o bin/obj/update.o bin/obj/remove.o bin/obj/lookup.o bin/obj/listall.o bin/obj/userAuth.o bin/obj/readDatabase.o bin/obj/writeDatabase.o bin/obj/getInput.o bin/obj/getConfirmation.o bin/obj/stringConversion.o bin/obj/changeClipboard.o bin/obj/encryption.o bin/obj/color.o bin/obj/router.o bin/obj/about.o bin/obj/checkPass.o bin/obj/setPass.o bin/obj/changePass.o bin/obj/help.o bin/obj/helpAdd.o bin/obj/helpApplication.o bin/obj/helpClear.o bin/obj/helpCommands.o bin/obj/helpDatabase.o bin/obj/helpExit.o bin/obj/helpFind.o bin/obj/helpListall.o bin/obj/helpRemove.o bin/obj/helpSetkey.o bin/obj/helpUpdate.o $(RES)
+LIBS     = -L"C:/msys64/mingw64/lib" -L"C:/msys64/mingw64/x86_64-w64-mingw32/lib" -static-libstdc++ -static-libgcc -static -s
+INCS     = -I"C:/msys64/mingw64/include" -I"C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include" -I"S:/SimplePassManager/include"
+CXXINCS  = -I"C:/msys64/mingw64/include" -I"C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include" -I"S:/SimplePassManager/include"
+BIN      = bin/SimplePassManager.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+bin/obj/main.o: src/main.cpp
+	$(CPP) -c src/main.cpp -o bin/obj/main.o $(CXXFLAGS)
+
+bin/obj/add.o: src/add.cpp
+	$(CPP) -c src/add.cpp -o bin/obj/add.o $(CXXFLAGS)
+
+bin/obj/update.o: src/update.cpp
+	$(CPP) -c src/update.cpp -o bin/obj/update.o $(CXXFLAGS)
+
+bin/obj/remove.o: src/remove.cpp
+	$(CPP) -c src/remove.cpp -o bin/obj/remove.o $(CXXFLAGS)
+
+bin/obj/lookup.o: src/lookup.cpp
+	$(CPP) -c src/lookup.cpp -o bin/obj/lookup.o $(CXXFLAGS)
+
+bin/obj/listall.o: src/listall.cpp
+	$(CPP) -c src/listall.cpp -o bin/obj/listall.o $(CXXFLAGS)
+
+bin/obj/userAuth.o: src/userAuth.cpp
+	$(CPP) -c src/userAuth.cpp -o bin/obj/userAuth.o $(CXXFLAGS)
+
+bin/obj/readDatabase.o: src/readDatabase.cpp
+	$(CPP) -c src/readDatabase.cpp -o bin/obj/readDatabase.o $(CXXFLAGS)
+
+bin/obj/writeDatabase.o: src/writeDatabase.cpp
+	$(CPP) -c src/writeDatabase.cpp -o bin/obj/writeDatabase.o $(CXXFLAGS)
+
+bin/obj/getInput.o: src/getInput.cpp
+	$(CPP) -c src/getInput.cpp -o bin/obj/getInput.o $(CXXFLAGS)
+
+bin/obj/getConfirmation.o: src/getConfirmation.cpp
+	$(CPP) -c src/getConfirmation.cpp -o bin/obj/getConfirmation.o $(CXXFLAGS)
+
+bin/obj/stringConversion.o: src/stringConversion.cpp
+	$(CPP) -c src/stringConversion.cpp -o bin/obj/stringConversion.o $(CXXFLAGS)
+
+bin/obj/changeClipboard.o: src/changeClipboard.cpp
+	$(CPP) -c src/changeClipboard.cpp -o bin/obj/changeClipboard.o $(CXXFLAGS)
+
+bin/obj/encryption.o: src/encryption.cpp
+	$(CPP) -c src/encryption.cpp -o bin/obj/encryption.o $(CXXFLAGS)
+
+bin/obj/color.o: src/color.cpp
+	$(CPP) -c src/color.cpp -o bin/obj/color.o $(CXXFLAGS)
+
+bin/obj/router.o: src/router.cpp
+	$(CPP) -c src/router.cpp -o bin/obj/router.o $(CXXFLAGS)
+
+bin/obj/about.o: src/about.cpp
+	$(CPP) -c src/about.cpp -o bin/obj/about.o $(CXXFLAGS)
+
+bin/obj/checkPass.o: src/checkPass.cpp
+	$(CPP) -c src/checkPass.cpp -o bin/obj/checkPass.o $(CXXFLAGS)
+
+bin/obj/setPass.o: src/setPass.cpp
+	$(CPP) -c src/setPass.cpp -o bin/obj/setPass.o $(CXXFLAGS)
+
+bin/obj/changePass.o: src/changePass.cpp
+	$(CPP) -c src/changePass.cpp -o bin/obj/changePass.o $(CXXFLAGS)
+
+bin/obj/help.o: src/help.cpp
+	$(CPP) -c src/help.cpp -o bin/obj/help.o $(CXXFLAGS)
+
+bin/obj/helpAdd.o: src/helpAdd.cpp
+	$(CPP) -c src/helpAdd.cpp -o bin/obj/helpAdd.o $(CXXFLAGS)
+
+bin/obj/helpApplication.o: src/helpApplication.cpp
+	$(CPP) -c src/helpApplication.cpp -o bin/obj/helpApplication.o $(CXXFLAGS)
+
+bin/obj/helpClear.o: src/helpClear.cpp
+	$(CPP) -c src/helpClear.cpp -o bin/obj/helpClear.o $(CXXFLAGS)
+
+bin/obj/helpCommands.o: src/helpCommands.cpp
+	$(CPP) -c src/helpCommands.cpp -o bin/obj/helpCommands.o $(CXXFLAGS)
+
+bin/obj/helpDatabase.o: src/helpDatabase.cpp
+	$(CPP) -c src/helpDatabase.cpp -o bin/obj/helpDatabase.o $(CXXFLAGS)
+
+bin/obj/helpExit.o: src/helpExit.cpp
+	$(CPP) -c src/helpExit.cpp -o bin/obj/helpExit.o $(CXXFLAGS)
+
+bin/obj/helpFind.o: src/helpFind.cpp
+	$(CPP) -c src/helpFind.cpp -o bin/obj/helpFind.o $(CXXFLAGS)
+
+bin/obj/helpListall.o: src/helpListall.cpp
+	$(CPP) -c src/helpListall.cpp -o bin/obj/helpListall.o $(CXXFLAGS)
+
+bin/obj/helpRemove.o: src/helpRemove.cpp
+	$(CPP) -c src/helpRemove.cpp -o bin/obj/helpRemove.o $(CXXFLAGS)
+
+bin/obj/helpSetkey.o: src/helpSetkey.cpp
+	$(CPP) -c src/helpSetkey.cpp -o bin/obj/helpSetkey.o $(CXXFLAGS)
+
+bin/obj/helpUpdate.o: src/helpUpdate.cpp
+	$(CPP) -c src/helpUpdate.cpp -o bin/obj/helpUpdate.o $(CXXFLAGS)
+
+bin/obj/SimplePassManager_private.res: SimplePassManager_private.rc 
+	$(WINDRES) -i SimplePassManager_private.rc --input-format=rc -o bin/obj/SimplePassManager_private.res -O coff 
+
